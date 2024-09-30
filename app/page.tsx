@@ -1,5 +1,6 @@
 import Image from "next/image";
 import placeholder from "@/assets/placeholder.svg";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -20,13 +21,12 @@ export default function Page() {
                   <div>Sign In</div>
                 </button>
               </form>
-              {/* prefetch attribute? */}
-              <a
+              <Link 
                 href="/about"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-              >
-                Learn More
-              </a>
+                prefetch={false}>
+                  Learn More
+              </Link>
             </div>
           </div>
           <Image
